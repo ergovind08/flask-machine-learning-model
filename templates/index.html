@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Recommendation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>ResideRelish</h1>
+        <div class="form-group">
+            <label for="cuisine-select">Select Cuisine:</label>
+            <input id="cuisine-select">
+            <select id="cuisine-select"></select>
+        </div>
+        <div class="form-group">
+            <label for="rating-select">Enter Desired Rating:</label>
+            <select id="rating-select"></select>
+        </div>
+        <div class="form-group">
+            <label for="budget">Enter Budget:</label>
+            <input type="number" id="budget" value="250" min="100" max="500">
+        </div>
+        <div class="form-group">
+            <label for="veg-select">Do you want Veg:</label>
+            <select id="veg-select"></select>
+        </div>
+        <div class="form-group">
+            <label for="order-select">Select an Option:</label>
+            <select id="order-select"></select>
+        </div>
+        <button id="recommend-btn">Show Restaurants</button>
+        <div id="recommendations"></div>
+    </div>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
